@@ -1,0 +1,36 @@
+<%
+	var logo = theme.logo;
+	if (!logo) {
+		logo = theme.image_src;
+	}
+	logo = url_for(logo);
+%>
+	<div class="layout-header">
+		<header class="header">
+			<div class="layout-logo">
+				<div class="panel-logo">
+
+					<div class="box-logo">
+						<a href="<%- url_for(config.root) %>" title="<%= config.title %>"><img src="<%= logo %>" class="img-logo"></a>
+					</div>
+					<div class="box-main-title">
+						<h1><a href="<%- url_for(config.root) %>"><%= config.title %></a></h1>
+					</div>
+					<div class="box-sub-title">
+<%
+	if (config.subtitle) {
+%>
+						<p><%= config.subtitle %></p>
+<%
+	}
+%>
+					</div>
+				</div>
+			</div>
+			<div class="layout-menu">
+				<div class="box-menu-list">
+<%- partial('_widget/page-nav') %>
+				</div>
+			</div>
+		</header>
+	</div>

@@ -1,0 +1,14 @@
+
+style: asset/css/style.css
+logo: asset/img/logo.png
+image_src: asset/img/logo.png
+favicon: asset/img/favicon.png
+
+menu:
+	Home: /
+	Sitemap: archives
+	Page: page/
+
+#google_analytics: test
+
+rss: atom.xml

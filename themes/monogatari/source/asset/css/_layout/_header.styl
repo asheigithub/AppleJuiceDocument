@@ -1,0 +1,32 @@
+
+.layout-header
+	//// position
+	position: fixed
+	left: 0
+	bottom: 0
+	right: auto
+	top: 0
+	z-index: 999
+
+	//// size
+	width: sidebar-width
+
+	//// color
+	background-color: color-theme
+
+	//// box
+	box-side-shadow(color-sidebar-shadow)
+
+	//// debug
+	//border: 1px solid red
+	//display: none
+
+	@media screen and (max-width: trigger-width)
+		//// position
+		position: static
+		margin: 0 auto
+
+		//// size
+		width: 100%
+
+

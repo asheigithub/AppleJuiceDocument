@@ -1,0 +1,59 @@
+# Hexo Configuration
+
+# Site
+title: Apple Juice
+subtitle:
+description:
+author: asheigithub
+language: zh-CN
+timezone:
+
+# URL
+url: https://asheigithub.github.io/apple-juice-actionscript/doc_cn
+root: /apple-juice-actionscript/doc_cn/
+permalink: :title-:year-:month-:day/
+
+# Directory
+skip_render:
+  - README.md
+  - '_posts/**/embed_page/**'
+
+# Writing
+new_post_name: :title.md # File name of new posts
+
+
+theme: Wikitten
+
+## Markdown
+## https://github.com/hexojs/hexo-renderer-marked
+marked:
+  gfm: true
+  
+## Plugins: https://hexo.io/plugins/
+### JsonContent
+jsonContent:
+  meta: false
+  pages:
+    title: true
+    date: true
+    path: true
+    text: true
+  posts:
+    title: true
+    date: true
+    path: true
+    text: true
+    tags: true
+    categories: true
+  ignore:
+    - 404.html
+    
+### Creat sitemap
+sitemap:
+  path: sitemap.xml
+
+### Adds nofollow attribute to all external links in your hexo blog posts automatically.
+nofollow:
+  enable: true
+  exclude:
+    - asheigithub.github.io # eg: zthxxx.me
