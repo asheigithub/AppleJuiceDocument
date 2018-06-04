@@ -116,3 +116,18 @@ v2: (0.0, 0.0, 100.0)
 //由于v2的值是复制得来的，改变并未对v1造成影响。
 v2: (0.0, 0.0, 999.0) v1: (0.0, 0.0, 100.0)
 ```
+
+### 操作符重载 ###
+.net可以使用操作符重载，为此Apple Juice也追加了这个特性。例如Unity中重载了GameObject的==和!=,以判断一个物体是否被销毁。我们也可以在AS3中这样判断。或者使用equals方法
+
+```actionscript
+var a:GameObject = new GameObject("aa");
+
+UObject.destroyImmediate_(a);
+
+trace(a == null);
+//Unity控制台将显示
+//true
+//UnityEngine.Debug:Log(Object)
+```
+
